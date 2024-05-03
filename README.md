@@ -1,5 +1,5 @@
 <h1 align="center">
-    🌍 Wanderly
+    wanderly 🌍
 </h1>
 
 ## Description
