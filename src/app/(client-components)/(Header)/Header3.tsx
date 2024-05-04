@@ -178,7 +178,7 @@ const Header3: FC<Header3Props> = ({ className = "" }) => {
             <div className="hidden md:flex relative z-10 flex-1 justify-end text-neutral-700 dark:text-neutral-100">
               <div className=" flex space-x-1">
 
-                <NotifyDropdown />
+                {/* <NotifyDropdown /> */}
                 <AvatarDropdown />
                 <MenuBar />
               </div>
