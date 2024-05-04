@@ -1,9 +1,6 @@
 <p align="center">
-    <img src="./public/logo.png" href="https://wanderly.design" width="30%" height="30%" />
+    <img src="./public/logo_letters.png" href="https://wanderly.design" width="70%" height="70%" />
 </p>
-<h1 align="center">
-   Wanderly 
-</h1>
 
 ## Description
 
