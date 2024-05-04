@@ -18,7 +18,7 @@ const DEMO_CATS: TaxonomyType[] = [
   {
     id: "1",
     href: "/listing-stay-map",
-    name: "New Yourk",
+    name: "New York",
     taxonomy: "category",
     count: 188288,
     thumbnail:
@@ -176,28 +176,29 @@ function PageHome() {
           />
         </div>
 
-        <SectionSubscribe2 />
+        {/*<SectionSubscribe2 />*/}
+
+        <SectionGridCategoryBox />
 
         <div className="relative py-16">
           <BackgroundSection className="bg-orange-50 dark:bg-black dark:bg-opacity-20 " />
           <SectionGridAuthorBox />
         </div>
 
-        <SectionGridCategoryBox />
 
-        <div className="relative py-16">
+        {/*<div className="relative py-16">
           <BackgroundSection />
           <SectionBecomeAnAuthor />
-        </div>
+        </div>*/}
 
-        <SectionSliderNewCategories
+        {/*<SectionSliderNewCategories
           heading="Explore by types of stays"
           subHeading="Explore houses based on 10 types of stays"
           categoryCardType="card5"
           itemPerRow={5}
-        />
+        />*/}
 
-        <SectionVideos />
+        {/*<SectionVideos />*/}
 
         <div className="relative py-16">
           <BackgroundSection />

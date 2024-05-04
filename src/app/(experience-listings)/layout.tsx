@@ -42,12 +42,12 @@ const Layout = ({ children }: { children: ReactNode }) => {
         </div>
 
         {/* SECTION */}
-        <SectionSubscribe2 className="py-24 lg:py-28" />
+        {/*<SectionSubscribe2 className="py-24 lg:py-28" />*/}
 
         {/* SECTION */}
-        <div className="relative py-16 mb-24 lg:mb-28">
-          <BackgroundSection className="bg-orange-50 dark:bg-black dark:bg-opacity-20 " />
-          <SectionGridAuthorBox />
+        <div className="relative py-16 mb-16 lg:mb-28">
+          {/*<BackgroundSection className="bg-orange-50 dark:bg-black dark:bg-opacity-20 " />
+          <SectionGridAuthorBox />*/}
         </div>
       </div>
     </div>

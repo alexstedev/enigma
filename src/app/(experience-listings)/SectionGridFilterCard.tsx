@@ -1,4 +1,6 @@
-import React, { FC } from "react";
+"use client";
+
+import React, { FC, useEffect } from "react";
 import { DEMO_EXPERIENCES_LISTINGS } from "@/data/listings";
 import { ExperiencesDataType, StayDataType } from "@/data/types";
 import Pagination from "@/shared/Pagination";
@@ -9,7 +11,22 @@ import ExperiencesCard from "@/components/ExperiencesCard";
 export interface SectionGridFilterCardProps {
   className?: string;
   data?: StayDataType[];
+  queryData?: QueryDataType;
 }
+
+export interface QueryDataType {
+  location: string;
+  checkIn: string;
+  checkOut: string;
+  guests: number;
+}
+
+const defaultQueryData: QueryDataType = {
+  location: "Tokyo",
+  checkIn: "2022-08-12",
+  checkOut: "2022-08-18",
+  guests: 2,
+};
 
 const DEMO_DATA: ExperiencesDataType[] = DEMO_EXPERIENCES_LISTINGS.filter(
   (_, i) => i < 8
@@ -18,17 +35,29 @@ const DEMO_DATA: ExperiencesDataType[] = DEMO_EXPERIENCES_LISTINGS.filter(
 const SectionGridFilterCard: FC<SectionGridFilterCardProps> = ({
   className = "",
   data = DEMO_DATA,
+  queryData = defaultQueryData,
 }) => {
+  // use effect get data from url
+  useEffect(() => {
+    // get data from url
+    const urlParams = new URLSearchParams(window.location.search);
+    const location = urlParams.get("location") || "Tokyo";
+    const checkIn = urlParams.get("checkIn") || "2022-08-12";
+    const checkOut = urlParams.get("checkOut") || "2022-08-18";
+    const guests = urlParams.get("guests") || 2;
+    console.log({ location, checkIn, checkOut, guests });
+  }, []);
+
   return (
     <div id="experiences-head" className={`nc-SectionGridFilterCard ${className}`}>
       <Heading2
-        heading="Experiences in Tokyo"
+        heading={`Experiences in ${queryData.location}`}
         subHeading={
           <span className="block text-neutral-500 dark:text-neutral-400 mt-3">
             233 experiences
             <span className="mx-2">·</span>
-            Aug 12 - 18
-            <span className="mx-2">·</span>2 Guests
+            {queryData.checkIn} - {queryData.checkOut}
+            <span className="mx-2">·</span>{queryData.guests} guests
           </span>
         }
       />
