@@ -16,17 +16,23 @@ import Input from "@/shared/Input";
 import LikeSaveBtns from "@/components/LikeSaveBtns";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import { Amenities_demos, PHOTOS } from "./constant";
+import { Amenities_demos, PHOTOS_1 } from "./constant";
 import StayDatesRangeInput from "./StayDatesRangeInput";
 import GuestsInput from "./GuestsInput";
 import SectionDateRange from "../SectionDateRange";
 import { Route } from "next";
 
-export interface ListingStayDetailPageProps { }
+export interface ListingStayDetailPageProps {
+  listing_name: string;
+  location_name: string;
+  host_name: string;
+}
 
-const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({ }) => {
-  //
-
+const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
+  listing_name = "Beach House in Collingwood",
+  location_name = "Tokyo, Japan",
+  host_name = "Kevin Francis",
+}) => {
   let [isOpenModalAmenities, setIsOpenModalAmenities] = useState(false);
 
   const thisPathname = usePathname();
@@ -55,7 +61,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({ }) => {
 
         {/* 2 */}
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
-          Beach House in Collingwood
+          {listing_name}
         </h2>
 
         {/* 3 */}
@@ -64,7 +70,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({ }) => {
           <span>·</span>
           <span>
             <i className="las la-map-marker-alt"></i>
-            <span className="ml-1"> Tokyo, Japan</span>
+            <span className="ml-1"> {location_name} </span>
           </span>
         </div>
 
@@ -74,7 +80,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({ }) => {
           <span className="ml-2.5 text-neutral-500 dark:text-neutral-400">
             Hosted by{" "}
             <span className="text-neutral-900 dark:text-neutral-200 font-medium">
-              Kevin Francis
+              {host_name}
             </span>
           </span>
         </div>
@@ -567,13 +573,13 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({ }) => {
             <Image
               fill
               className="object-cover rounded-md sm:rounded-xl"
-              src={PHOTOS[0]}
+              src={PHOTOS_1[0]}
               alt=""
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
             />
             <div className="absolute inset-0 bg-neutral-900 bg-opacity-20 opacity-0 hover:opacity-100 transition-opacity"></div>
           </div>
-          {PHOTOS.filter((_, i) => i >= 1 && i < 5).map((item, index) => (
+          {PHOTOS_1.filter((_, i) => i >= 1 && i < 5).map((item, index) => (
             <div
               key={index}
               className={`relative rounded-md sm:rounded-xl overflow-hidden ${index >= 3 ? "hidden sm:block" : ""

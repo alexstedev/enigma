@@ -131,7 +131,7 @@ function PageHome2() {
           </div>
         </div>
 
-        <SectionHowItWork
+        {/*<SectionHowItWork
           data={[
             {
               id: 1,
@@ -155,7 +155,7 @@ function PageHome2() {
               desc: "Find a home or space from our search bar. Enter your specific location, property type and price range.",
             },
           ]}
-        />
+        />*/}
 
         <div className="relative py-16">
           <BackgroundSection />

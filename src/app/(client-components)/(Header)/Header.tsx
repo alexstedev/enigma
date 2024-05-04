@@ -16,8 +16,9 @@ const Header: FC<HeaderProps> = ({ navType = "Header3", className = "" }) => {
       case "MainNav2":
         return <MainNav2 />;
       case "Header3":
-      default:
         return <Header3 />;
+      default:
+        return <MainNav2 />;
     }
   };
 

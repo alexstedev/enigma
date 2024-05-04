@@ -24,9 +24,10 @@ const SectionBecomeAnAuthor: FC<SectionBecomeAnAuthorProps> = ({
           Why did you choose us?
         </h2>
         <span className="block mt-6 text-neutral-500 dark:text-neutral-400">
-          Accompanying us, you have a trip full of experiences. With Wanderly,
-          booking accommodation, resort villas, hotels, private houses,
-          apartments... becomes fast, convenient and easy.
+          Embark on a Purposeful Journey: Connect with fellow explorers,
+          Explore authentic experiences, and Share unforgettable moments.
+          With Wanderly, your travel experience goes beyond booking accommodations
+          – it's about immersing yourself in a world of meaningful connections and unforgettable adventures.
         </span>
         <ButtonPrimary className="mt-6 sm:mt-11">
           Become an author

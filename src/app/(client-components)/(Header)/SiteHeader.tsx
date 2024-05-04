@@ -182,7 +182,7 @@ const SiteHeader = () => {
         return <Header3 className={headerClassName} />;
 
       default:
-        return <Header3 className={headerClassName} />;
+        return <Header className={headerClassName} navType="MainNav2" />;
     }
   };
 
