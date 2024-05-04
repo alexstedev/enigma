@@ -1,5 +1,8 @@
+<p align="center">
+    <img src="./public/logo.png" href="https://wanderly.design" width="30%" height="30%" />
+</p>
 <h1 align="center">
-    wanderly 🌍
+   Wanderly 
 </h1>
 
 ## Description
