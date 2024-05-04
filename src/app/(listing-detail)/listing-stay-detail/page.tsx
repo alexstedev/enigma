@@ -22,17 +22,13 @@ import GuestsInput from "./GuestsInput";
 import SectionDateRange from "../SectionDateRange";
 import { Route } from "next";
 
-export interface ListingStayDetailPageProps {
-  listing_name: string;
-  location_name: string;
-  host_name: string;
-}
+export interface ListingStayDetailPageProps { };
 
-const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
+const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({/*
   listing_name = "Beach House in Collingwood",
   location_name = "Tokyo, Japan",
   host_name = "Kevin Francis",
-}) => {
+*/}) => {
   let [isOpenModalAmenities, setIsOpenModalAmenities] = useState(false);
 
   const thisPathname = usePathname();
@@ -61,7 +57,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
 
         {/* 2 */}
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold">
-          {listing_name}
+          Beach House in Collingwood
         </h2>
 
         {/* 3 */}
@@ -70,7 +66,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
           <span>·</span>
           <span>
             <i className="las la-map-marker-alt"></i>
-            <span className="ml-1"> {location_name} </span>
+            <span className="ml-1"> Tokyo, Japan </span>
           </span>
         </div>
 
@@ -80,7 +76,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({
           <span className="ml-2.5 text-neutral-500 dark:text-neutral-400">
             Hosted by{" "}
             <span className="text-neutral-900 dark:text-neutral-200 font-medium">
-              {host_name}
+              Kevin Francis
             </span>
           </span>
         </div>

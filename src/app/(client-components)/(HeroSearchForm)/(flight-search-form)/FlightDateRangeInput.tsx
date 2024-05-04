@@ -48,10 +48,10 @@ const FlightDateRangeInput: FC<FlightDateRangeInputProps> = ({
             }) || "Add dates"}
             {selectsRange && endDate
               ? " - " +
-                endDate?.toLocaleDateString("en-US", {
-                  month: "short",
-                  day: "2-digit",
-                })
+              endDate?.toLocaleDateString("en-US", {
+                month: "short",
+                day: "2-digit",
+              })
               : ""}
           </span>
           <span className="block mt-1 text-sm text-neutral-400 leading-none font-light">
@@ -68,9 +68,8 @@ const FlightDateRangeInput: FC<FlightDateRangeInputProps> = ({
         {({ open }) => (
           <>
             <div
-              className={`flex-1 z-10 flex items-center focus:outline-none ${
-                open ? "nc-hero-field-focused" : ""
-              }`}
+              className={`flex-1 z-10 flex items-center focus:outline-none ${open ? "nc-hero-field-focused" : ""
+                }`}
             >
               <Popover.Button
                 className={`flex-1 z-10 flex relative ${fieldClassName} items-center space-x-3 focus:outline-none `}
@@ -87,7 +86,7 @@ const FlightDateRangeInput: FC<FlightDateRangeInputProps> = ({
               {/* BUTTON SUBMIT OF FORM */}
               {hasButtonSubmit && (
                 <div className="pr-2 xl:pr-4">
-                  <ButtonSubmit href="/listing-car-detail" />
+                  <ButtonSubmit href="/listing-flights" />
                 </div>
               )}
             </div>

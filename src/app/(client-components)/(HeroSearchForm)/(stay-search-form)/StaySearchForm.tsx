@@ -3,7 +3,7 @@ import LocationInput from "../LocationInput";
 import GuestsInput from "../GuestsInput";
 import StayDatesRangeInput from "./StayDatesRangeInput";
 
-const StaySearchForm: FC<{}> = ({}) => {
+const StaySearchForm: FC<{}> = ({ }) => {
   const renderForm = () => {
     return (
       <form className="w-full relative mt-8 flex rounded-full shadow-xl dark:shadow-2xl bg-white dark:bg-neutral-800 ">
