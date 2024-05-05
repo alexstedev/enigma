@@ -16,11 +16,19 @@ import Input from "@/shared/Input";
 import LikeSaveBtns from "@/components/LikeSaveBtns";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import { Amenities_demos, PHOTOS_1 } from "./constant";
+import { Amenities_demos, PHOTOS_1, chatMessages } from "./constant";
 import StayDatesRangeInput from "./StayDatesRangeInput";
 import GuestsInput from "./GuestsInput";
 import SectionDateRange from "../SectionDateRange";
 import { Route } from "next";
+import {
+  MinChatUiProvider,
+  MainContainer,
+  MessageInput,
+  MessageContainer,
+  MessageList,
+  MessageHeader
+} from "@minchat/react-chat-ui";
 
 export interface ListingStayDetailPageProps { };
 
@@ -114,6 +122,37 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({/*
       </div>
     );
   };
+
+  const renderChatDemo = () => {
+    const defaultMessages = chatMessages;
+    const [messages, setMessages] = useState(defaultMessages);
+    return (
+      <div className="listingSection__wrap">
+        <h2 className="text-2xl font-semibold">Chat with adventurers staying close by</h2>
+        <MinChatUiProvider theme="#6ea9d7">
+          <MainContainer style={{ height: '65vh' }}>
+            <MessageContainer>
+              <MessageHeader />
+              <MessageList
+                currentUserId='eden'
+                messages={messages}
+              />
+              <MessageInput placeholder="Type message here" showSendButton onSendMessage={(message) => {
+                const newMessage = {
+                  text: message,
+                  user: {
+                    id: 'eden',
+                    name: 'Eden',
+                  }
+                }
+                setMessages([...messages, newMessage]);
+              }} />
+            </MessageContainer>
+          </MainContainer>
+        </MinChatUiProvider>
+      </div>
+    );
+  }
 
   const renderSection2 = () => {
     return (
@@ -618,6 +657,7 @@ const ListingStayDetailPage: FC<ListingStayDetailPageProps> = ({/*
           {renderSection1()}
           {renderSection2()}
           {renderSection3()}
+          {renderChatDemo()}
           {renderSection4()}
           <SectionDateRange />
           {renderSection5()}

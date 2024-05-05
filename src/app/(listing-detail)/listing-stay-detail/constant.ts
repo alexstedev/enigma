@@ -96,3 +96,42 @@ export const imageGallery: ListingGalleryImage[] = [...ALL_PHOTOS].map(
     };
   }
 );
+
+
+export const chatMessages = [
+  {
+    text: 'Hello',
+    user: {
+      id: 'mark',
+      name: 'Markus',
+    },
+  },
+  {
+    text: 'Hi Markus!',
+    user: {
+      id: 'eden',
+      name: 'Eden',
+    },
+  },
+  {
+    text: 'Do you know of any nice restaurants in the area?',
+    user: {
+      id: 'mark',
+      name: 'Markus',
+    },
+  },
+  {
+    text: 'There is a great Thai place called Thai Garden nearby.',
+    user: {
+      id: 'eden',
+      name: 'Eden',
+    },
+  },
+  {
+    text: 'I haven\'t been there yet, but I heard it is amazing!',
+    user: {
+      id: 'eden',
+      name: 'Eden',
+    },
+  },
+]

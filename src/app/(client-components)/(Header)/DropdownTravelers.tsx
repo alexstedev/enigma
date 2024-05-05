@@ -23,13 +23,7 @@ const solutions: SolutionItem[] = [
     icon: IconOne,
   },
   {
-    name: "Real Estate",
-    description: "Real Estate description",
-    href: "/listing-real-estate",
-    icon: IconTwo,
-  },
-  {
-    name: "Cars",
+    name: "Car rental",
     description: "Car rental description",
     href: "/listing-car",
     icon: IconThree,
@@ -39,6 +33,12 @@ const solutions: SolutionItem[] = [
     description: "Tour and experiences",
     href: "/listing-experiences",
     icon: IconFour,
+  },
+  {
+    name: "Flights",
+    description: "Flights description",
+    href: "/listing-flights",
+    icon: IconTwo,
   },
 ];
 
@@ -77,9 +77,8 @@ export default function DropdownTravelers() {
                       key={index}
                       href={item.href}
                       onClick={() => close()}
-                      className={`flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-700 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 ${
-                        item.active ? "bg-neutral-100 dark:bg-neutral-700" : ""
-                      }`}
+                      className={`flex items-center p-2 -m-3 transition duration-150 ease-in-out rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-700 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50 ${item.active ? "bg-neutral-100 dark:bg-neutral-700" : ""
+                        }`}
                     >
                       <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 bg-primary-50 rounded-md text-primary-500 sm:h-12 sm:w-12">
                         <item.icon aria-hidden="true" />

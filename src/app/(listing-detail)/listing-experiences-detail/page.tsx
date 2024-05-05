@@ -13,12 +13,20 @@ import Input from "@/shared/Input";
 import { usePathname, useRouter } from "next/navigation";
 import LikeSaveBtns from "@/components/LikeSaveBtns";
 import StartRating from "@/components/StartRating";
-import { includes_demo, PHOTOS } from "./constant";
+import { includes_demo, PHOTOS, chatMessages } from "./constant";
 import Image from "next/image";
 import StayDatesRangeInput from "./StayDatesRangeInput";
 import GuestsInput from "./GuestsInput";
 import SectionDateRange from "../SectionDateRange";
 import { Route } from "next";
+import {
+  MinChatUiProvider,
+  MainContainer,
+  MessageInput,
+  MessageContainer,
+  MessageList,
+  MessageHeader
+} from "@minchat/react-chat-ui";
 
 export interface ListingExperiencesDetailPageProps { }
 
@@ -90,44 +98,32 @@ const ListingExperiencesDetailPage: FC<
   };
 
   const renderChatDemo = () => {
-    // small chat component that simulates a conversation
+    const defaultMessages = chatMessages;
+    const [messages, setMessages] = useState(defaultMessages);
     return (
       <div className="listingSection__wrap">
-        <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-semibold">Chat</h2>
-          <ButtonSecondary>View all</ButtonSecondary>
-        </div>
-        <div className="w-14 border-b border-neutral-200 dark:border-neutral-700"></div>
-        <div className="flex flex-col space-y-4">
-          <div className="flex items-center space-x-3">
-            <Avatar sizeClass="h-10 w-10" radius="rounded-full" />
-            <div>
-              <div className="flex items-center space-x-2">
-                <span className="font-semibold">Kevin Francis</span>
-                <span className="text-neutral-500 dark:text-neutral-400">
-                  2:30 PM
-                </span>
-              </div>
-              <span className="text-neutral-6000 dark:text-neutral-300">
-                Hi, I am Kevin, how can I help you?
-              </span>
-            </div>
-          </div>
-          <div className="flex items-center space-x-3">
-            <Avatar sizeClass="h-10 w-10" radius="rounded-full" />
-            <div>
-              <div className="flex items-center space-x-2">
-                <span className="font-semibold">Kevin Francis</span>
-                <span className="text-neutral-500 dark:text-neutral-400">
-                  2:30 PM
-                </span>
-              </div>
-              <span className="text-neutral-6000 dark:text-neutral-300">
-                Hi, I am Kevin, how can I help you?
-              </span>
-            </div>
-          </div>
-        </div>
+        <h2 className="text-2xl font-semibold">Chat with fellow adventurers!</h2>
+        <MinChatUiProvider theme="#6ea9d7">
+          <MainContainer style={{ height: '60vh' }}>
+            <MessageContainer>
+              <MessageHeader />
+              <MessageList
+                currentUserId='eden'
+                messages={messages}
+              />
+              <MessageInput placeholder="Type message here" showSendButton onSendMessage={(message) => {
+                const newMessage = {
+                  text: message,
+                  user: {
+                    id: 'eden',
+                    name: 'Eden',
+                  }
+                }
+                setMessages([...messages, newMessage]);
+              }} />
+            </MessageContainer>
+          </MainContainer>
+        </MinChatUiProvider>
       </div>
     );
   }

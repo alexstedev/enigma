@@ -37,3 +37,41 @@ export const imageGallery: ListingGalleryImage[] = [...PHOTOS].map(
     };
   }
 );
+
+export const chatMessages = [
+  {
+    text: 'Hello',
+    user: {
+      id: 'mark',
+      name: 'Markus',
+    },
+  },
+  {
+    text: 'Hi Markus!',
+    user: {
+      id: 'eden',
+      name: 'Eden',
+    },
+  },
+  {
+    text: 'Have you been on this tour before?',
+    user: {
+      id: 'mark',
+      name: 'Markus',
+    },
+  },
+  {
+    text: 'No, but I heard it is amazing!',
+    user: {
+      id: 'eden',
+      name: 'Eden',
+    },
+  },
+  {
+    text: 'I am excited to go!',
+    user: {
+      id: 'eden',
+      name: 'Eden',
+    },
+  },
+]

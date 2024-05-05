@@ -20,7 +20,7 @@ const DEMO_DATA: CommentListingDataType = {
   name: "Cody Fisher",
   date: "May 20, 2021",
   comment:
-    "There’s no stopping the tech giant. Apple now opens its 100th store in China.There’s no stopping the tech giant.",
+    "This is a great place to stay. The staff is friendly and the rooms are clean. The location is perfect for exploring the zone. I would definitely stay here again!",
   starPoint: 5,
 };
 
