@@ -1,6 +1,7 @@
 import React from "react";
 import I404Png from "@/images/404.png";
 import Image from "next/image";
+import Link from "next/link";
 import ButtonPrimary from "@/shared/ButtonPrimary";
 
 const Page404 = () => (
@@ -13,7 +14,7 @@ const Page404 = () => (
           {`THE PAGE YOU WERE LOOKING FOR DOESN'T EXIST.`}{" "}
         </span>
         <div className="pt-8">
-          <ButtonPrimary href="/">Return Home Page</ButtonPrimary>
+          <Link href='/'><ButtonPrimary href="/">Return to Home Page</ButtonPrimary></Link>
         </div>
       </header>
     </div>

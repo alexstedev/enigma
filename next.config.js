@@ -40,6 +40,11 @@ const nextConfig = {
         destination: "https://github.com/alexstedev/wanderly",
         permanent: true,
       },
+      {
+        source: "/code",
+        destination: "https://github.com/alexstedev/wanderly",
+        permanent: true,
+      },
     ];
   },
 };

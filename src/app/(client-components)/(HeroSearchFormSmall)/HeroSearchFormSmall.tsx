@@ -40,11 +40,10 @@ const HeroSearchFormSmall: FC<HeroSearchFormSmallProps> = ({
                 setTabActive(tab);
                 onTabChange && onTabChange(tab);
               }}
-              className={`relative flex-shrink-0 flex items-center cursor-pointer text-base ${
-                active
+              className={`relative flex-shrink-0 flex items-center cursor-pointer text-base ${active
                   ? "text-neutral-900 dark:text-neutral-200 font-medium"
                   : "text-neutral-500 dark:text-neutral-300 "
-              } `}
+                } `}
               key={tab}
             >
               <div className="relative select-none">
