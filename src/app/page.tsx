@@ -163,7 +163,6 @@ function PageHome() {
 
         <SectionGridFeaturePlaces cardType="card2" />
 
-
         <div className="relative py-16">
           <BackgroundSection className="bg-orange-50 dark:bg-black/20" />
           <SectionSliderNewCategories
@@ -176,20 +175,17 @@ function PageHome() {
           />
         </div>
 
-        {/*<SectionSubscribe2 />*/}
-
         <SectionGridCategoryBox />
+
+        <div className="relative py-16">
+          <BackgroundSection />
+          <SectionBecomeAnAuthor />
+        </div>
 
         <div className="relative py-16">
           <BackgroundSection className="bg-orange-50 dark:bg-black dark:bg-opacity-20 " />
           <SectionGridAuthorBox />
         </div>
-
-
-        {/*<div className="relative py-16">
-          <BackgroundSection />
-          <SectionBecomeAnAuthor />
-        </div>*/}
 
         {/*<SectionSliderNewCategories
           heading="Explore by types of stays"
@@ -198,12 +194,14 @@ function PageHome() {
           itemPerRow={5}
         />*/}
 
+        <SectionSubscribe2 />
+
         {/*<SectionVideos />*/}
 
-        <div className="relative py-16">
+        {/*<div className="relative py-16">
           <BackgroundSection />
           <SectionClientSay />
-        </div>
+        </div>*/}
       </div>
     </main>
   );
