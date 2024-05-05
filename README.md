@@ -16,3 +16,18 @@ With Wanderly, travelers can:
 - Share travel stories, tips, and recommendations with our vibrant community of adventurers. ✈️
 
 Join Wanderly today and unlock a world of meaningful travel experiences! 🌟
+
+
+## Features
+
+- **Accommodation Booking**: Find and book accommodations that suit your travel preferences.
+- **Activity Recommendations**: Discover local experiences and activities tailored to your interests.
+- **Car Rental Services**: Rent a car for your journey with ease.
+- **Flight Booking**: Book flights to your destination city.
+- **Chat with Locals and Travelers**: Connect with fellow travelers and locals that are close to your accommodation or are doing similar activities.
+- **Share Travel Stories**: Share your travel experiences, tips, and recommendations with the Wanderly community.
+
+## Contributing and Development
+
+We welcome contributions from the community! If you're interested in contributing to Wanderly, please refer to our [Contributing Guidelines](./CONTRIBUTING.md) for more information.
+
