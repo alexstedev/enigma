@@ -33,6 +33,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/repo",
+        destination: "https://github.com/alexstedev/wanderly",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
