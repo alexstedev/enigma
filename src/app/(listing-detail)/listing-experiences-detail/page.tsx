@@ -102,7 +102,7 @@ const ListingExperiencesDetailPage: FC<
     const [messages, setMessages] = useState(defaultMessages);
     return (
       <div className="listingSection__wrap">
-        <h2 className="text-2xl font-semibold">Chat with fellow adventurers!</h2>
+        <h2 className="text-2xl font-semibold">Chat with travellers that have booked this adventure!</h2>
         <MinChatUiProvider theme="#6ea9d7">
           <MainContainer style={{ height: '60vh' }}>
             <MessageContainer>
