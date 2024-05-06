@@ -1,5 +1,6 @@
 <p align="center">
     <img src="./public/logo_letters.png" href="https://wanderly.design" width="70%" height="70%" />
+    <br/>HackUPC 2024 - TravelPerk Challenge
 </p>
 
 ## Description
@@ -31,3 +32,6 @@ Join Wanderly today and unlock a world of meaningful travel experiences! 🌟
 
 We welcome contributions from the community! If you're interested in contributing to Wanderly, please refer to our [Contributing Guidelines](./CONTRIBUTING.md) for more information.
 
+## Acknowledgements
+
+- Using the `chisfis` [template](https://themeforest.net/item/chisfis-online-booking-nextjs-template/43399526), [react-chat-ui](https://github.com/MinChatHQ/react-chat-ui) and Airbnb's [visx](https://airbnb.io/visx/)
