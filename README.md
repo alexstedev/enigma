@@ -34,4 +34,4 @@ We welcome contributions from the community! If you're interested in contributin
 
 ## Acknowledgements
 
-- Using the `chisfis` [template](https://themeforest.net/item/chisfis-online-booking-nextjs-template/43399526), [react-chat-ui](https://github.com/MinChatHQ/react-chat-ui) and Airbnb's [visx](https://airbnb.io/visx/)
+Using the `chisfis` [template](https://themeforest.net/item/chisfis-online-booking-nextjs-template/43399526), [react-chat-ui](https://github.com/MinChatHQ/react-chat-ui) and Airbnb's [visx](https://airbnb.io/visx/)
